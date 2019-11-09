@@ -20,7 +20,10 @@
     "homepage": "https://github.com/nanhupatar/backend#readme",
     "dependencies": {
         "koa": "^2.11.0",
-        "koa-router": "^7.4.0"
+        "koa-router": "^7.4.0",
+        "mysql2": "^2.0.0",
+        "sequelize": "^5.21.2",
+        "sequelize-typescript": "^1.0.0"
     },
     "devDependencies": {
         "@types/koa": "^2.0.51",

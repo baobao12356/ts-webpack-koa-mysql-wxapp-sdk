@@ -1,9 +1,8 @@
-const Router = require('koa-router');
+import * as Router from 'koa-router';
 const router = new Router();
+const user = require('../controllers/common/user');
 
-router.get('/*', (ctx) => {
-    console.log('ss');
-    ctx.body = 'Hello World!';
-});
+router.prefix('/api/v1');
+router.get('/:appName/user/login', user.login);
 
-module.exports = router;
+export default router;
