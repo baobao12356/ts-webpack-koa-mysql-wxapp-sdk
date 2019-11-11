@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
+import * as fs from 'fs';
 
 const config: webpack.Configuration = {
     mode: 'production',
@@ -8,6 +9,9 @@ const config: webpack.Configuration = {
         path: path.resolve(__dirname, '../dist'),
         filename: 'index.js'
     },
+    externals: fs.readdirSync('node_modules').filter((x) => {
+        return x !== '.bin';
+    }),
     module: {
         rules: [
             {

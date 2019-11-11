@@ -6,6 +6,6 @@ import WebpackConfig from '../config/webpack.prod.conf';
 
 const serverCompiler = webpack(WebpackConfig);
 
-serverCompiler.run((err: Error) => {
-    console.log('错误信息:' + err);
+serverCompiler.run((err, stats) => {
+    process.stdout.write(stats.toString() + '\n');
 });

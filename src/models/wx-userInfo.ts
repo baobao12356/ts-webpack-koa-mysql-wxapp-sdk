@@ -11,6 +11,15 @@ BeautyCameraUserInfo.init(BasicUserInfoModelConfig, {
 });
 
 BeautyCameraUserInfo.sync();
-// 美颜相机
 
-export { BeautyCameraUserInfo };
+// 朋友答题
+class FriendQuestionsUserInfo extends BasicUserInfoModel {}
+
+FriendQuestionsUserInfo.init(BasicUserInfoModelConfig, {
+    sequelize,
+    tableName: 'friend_questions_userInfo'
+});
+
+FriendQuestionsUserInfo.sync();
+
+export { BeautyCameraUserInfo, FriendQuestionsUserInfo };

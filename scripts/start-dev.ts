@@ -8,7 +8,7 @@ webpack(WebpackConfig).watch(
     {
         aggregateTimeout: 300
     },
-    (err: Error) => {
-        console.log(err);
+    (err: Error, stats) => {
+        process.stdout.write(stats.toString() + '\n');
     }
 );
